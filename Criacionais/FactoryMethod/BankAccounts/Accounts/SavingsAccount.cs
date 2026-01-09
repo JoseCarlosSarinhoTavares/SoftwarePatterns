@@ -9,7 +9,7 @@ namespace BankAccounts.Accounts
         private double _depositInterestRate;
         private double _withdrawalInterestRate;
 
-        public SavingsAccount(Holder holder, double depositInterestRate, double withdrawalInterestRate) 
+        public SavingsAccount(Holder holder, double depositInterestRate, double withdrawalInterestRate)
         {
             _holder = holder;
             _depositInterestRate = depositInterestRate;

@@ -5,7 +5,7 @@ namespace BankAccounts.Factories
 {
     public class AccountsFactory
     {
-        public static IAccount GetAccount(string tipo, Holder holder) 
+        public static IAccount GetAccount(string tipo, Holder holder)
         {
             switch (tipo)
             {
@@ -15,7 +15,7 @@ namespace BankAccounts.Factories
                     return new SavingsAccount(holder, depositInterestRate: 0.10, withdrawalInterestRate: 0.02);
                 default:
                     throw new ArgumentException("Tipo de conta inválido", nameof(tipo));
-            }; 
+            };
         }
     }
 }

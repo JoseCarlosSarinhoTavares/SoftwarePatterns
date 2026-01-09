@@ -1,7 +1,8 @@
 ﻿using BankAccounts.Accounts;
 using BankAccounts.Accounts.Interfaces;
+using BankAccounts.Factories;
 
-namespace BankAccounts.Factories
+namespace BankAccounts
 {
     public class FactoryMethodApp
     {
