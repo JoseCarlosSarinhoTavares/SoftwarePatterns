@@ -2,7 +2,7 @@
 using DatabaseConnection.Connections.Interfaces;
 using System.Data.Common;
 
-namespace BankAccounts.Factories
+namespace DatabaseConnection
 {
     public class Program
     {
