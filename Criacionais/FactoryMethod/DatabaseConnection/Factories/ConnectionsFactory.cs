@@ -1,6 +1,7 @@
-﻿using DatabaseConnection.Connections.Interfaces;
+﻿using DatabaseConnection.Connections;
+using DatabaseConnection.Connections.Interfaces;
 
-namespace DatabaseConnection.Connections.Factories
+namespace DatabaseConnection.Factories
 {
     public class ConnectionsFactory
     {

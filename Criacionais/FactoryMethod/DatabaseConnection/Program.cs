@@ -1,5 +1,5 @@
-﻿using DatabaseConnection.Connections.Factories;
-using DatabaseConnection.Connections.Interfaces;
+﻿using DatabaseConnection.Connections.Interfaces;
+using DatabaseConnection.Factories;
 using System.Data.Common;
 
 namespace DatabaseConnection
