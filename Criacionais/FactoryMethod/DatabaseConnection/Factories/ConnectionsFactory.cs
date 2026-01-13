@@ -26,7 +26,7 @@ namespace DatabaseConnection.Factories
         private static IDbConnection GetSQLServerConnection()
         {
             return new SqlServerConnection(
-                "Server=(localdb)\\mssqllocaldb;Database=SGI;"
+                "Server=(localdb)\\mssqllocaldb;Database=SoftwarePatterns;Trusted_Connection=True;"
             );
         }
 

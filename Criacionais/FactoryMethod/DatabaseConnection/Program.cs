@@ -18,7 +18,7 @@ namespace DatabaseConnection
             using DbConnection conn1 = sqlServerConnection.Connect();
             using DbCommand cmd1 = conn1.CreateCommand();
 
-            cmd1.CommandText = "SELECT * FROM Usuarios";
+            cmd1.CommandText = "SELECT * FROM Users";
 
             using DbDataReader reader1 = cmd1.ExecuteReader();
 
@@ -42,7 +42,7 @@ namespace DatabaseConnection
 
             // CRIA A TABELA NO SQLITE
             cmd2.CommandText = """
-                CREATE TABLE IF NOT EXISTS Usuarios (
+                CREATE TABLE IF NOT EXISTS Users (
                     Id INTEGER PRIMARY KEY AUTOINCREMENT,
                     UserName TEXT NOT NULL,
                     Email TEXT NOT NULL
@@ -52,13 +52,13 @@ namespace DatabaseConnection
 
             // insere dado de teste
             cmd2.CommandText = """
-                INSERT INTO Usuarios (UserName, Email)
+                INSERT INTO Users (UserName, Email)
                 SELECT 'teste', 'teste@teste.com'
-                WHERE NOT EXISTS (SELECT 1 FROM Usuarios);
+                WHERE NOT EXISTS (SELECT 1 FROM Users);
                 """;
             cmd2.ExecuteNonQuery();
 
-            cmd2.CommandText = "SELECT * FROM Usuarios";
+            cmd2.CommandText = "SELECT * FROM Users";
             using DbDataReader reader2 = cmd2.ExecuteReader();
 
             while (reader2.Read())
