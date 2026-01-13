@@ -26,11 +26,13 @@ namespace Caches
                     case "1":
                         cache = CacheFactory.GetCache("mem");
                         Console.Clear();
+                        Console.WriteLine("------------- Memória -------------");
                         break;
 
                     case "2":
                         cache = CacheFactory.GetCache("db");
                         Console.Clear();
+                        Console.WriteLine("------------- Banco de Dados -------------");
                         break;
 
                     default:
