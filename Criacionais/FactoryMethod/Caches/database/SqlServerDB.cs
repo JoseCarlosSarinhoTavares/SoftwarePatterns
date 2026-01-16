@@ -1,5 +1,4 @@
 ﻿using System.Data.SqlClient;
-using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace Caches.Database
 {

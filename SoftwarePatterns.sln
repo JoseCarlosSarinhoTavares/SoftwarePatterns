@@ -11,7 +11,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BankAccounts", "Criacionais
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DatabaseConnection", "Criacionais\FactoryMethod\DatabaseConnection\DatabaseConnection.csproj", "{F80B7E48-409D-401D-8238-3F4DA00F5F4C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Caches", "Criacionais\FactoryMethod\Caches\Caches.csproj", "{58E70B50-CEC7-4F56-800E-ABB4F457A6BE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Caches", "Criacionais\FactoryMethod\Caches\Caches.csproj", "{58E70B50-CEC7-4F56-800E-ABB4F457A6BE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AbstractFactory", "AbstractFactory", "{35B458D1-DAE7-42A6-9B11-AF5B8BE5B183}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatabaseAndDaos", "Criacionais\AbstractFactory\DatabaseAndDaos\DatabaseAndDaos.csproj", "{5445EC73-7B81-4DFA-AEE1-6C35F05066F6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,6 +35,10 @@ Global
 		{58E70B50-CEC7-4F56-800E-ABB4F457A6BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{58E70B50-CEC7-4F56-800E-ABB4F457A6BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{58E70B50-CEC7-4F56-800E-ABB4F457A6BE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5445EC73-7B81-4DFA-AEE1-6C35F05066F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5445EC73-7B81-4DFA-AEE1-6C35F05066F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5445EC73-7B81-4DFA-AEE1-6C35F05066F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5445EC73-7B81-4DFA-AEE1-6C35F05066F6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -40,6 +48,8 @@ Global
 		{85AEB1A6-AED9-478C-A208-C93941423656} = {B584737F-2174-4F43-AF11-B75B6D68F6C2}
 		{F80B7E48-409D-401D-8238-3F4DA00F5F4C} = {B584737F-2174-4F43-AF11-B75B6D68F6C2}
 		{58E70B50-CEC7-4F56-800E-ABB4F457A6BE} = {B584737F-2174-4F43-AF11-B75B6D68F6C2}
+		{35B458D1-DAE7-42A6-9B11-AF5B8BE5B183} = {FCD1D775-0BAC-495C-8040-987DE41ED47A}
+		{5445EC73-7B81-4DFA-AEE1-6C35F05066F6} = {35B458D1-DAE7-42A6-9B11-AF5B8BE5B183}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {63AA5950-BB0F-4356-BC30-03C5D18B9341}
