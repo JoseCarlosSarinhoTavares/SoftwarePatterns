@@ -33,7 +33,7 @@ namespace DatabaseConnection.Factories
         private static IDbConnection GetSQLiteConnection()
         {
             return new SQLiteConnection(
-                $"Data Source={Path.Combine(AppContext.BaseDirectory, "TESTE.db")}"
+                $"Data Source={Path.Combine(AppContext.BaseDirectory, "SoftwarePatterns.db")}"
             );
         }
     }

@@ -6,7 +6,7 @@ namespace DatabaseAndDaos.Configuration
     public class SqLiteDb
     {
         private static readonly string ConnectionString =
-            $"Data Source={Path.Combine(AppContext.BaseDirectory, "TESTE.db")}";
+            $"Data Source={Path.Combine(AppContext.BaseDirectory, "SoftwarePatterns.db")}";
 
         public DbConnection Initialize()
         {
@@ -18,12 +18,12 @@ namespace DatabaseAndDaos.Configuration
                 using var command = connection.CreateCommand();
                 command.CommandText = @"
                     CREATE TABLE IF NOT EXISTS Clients (
-                        Id INTEGER PRIMARY KEY AUTOINCREMENT,
+                        Id INTEGER PRIMARY KEY,
                         Name TEXT NOT NULL
                     );
 
                     CREATE TABLE IF NOT EXISTS Products (
-                        Id INTEGER PRIMARY KEY AUTOINCREMENT,
+                        Id INTEGER PRIMARY KEY,
                         Name TEXT NOT NULL
                     );
                 ";
