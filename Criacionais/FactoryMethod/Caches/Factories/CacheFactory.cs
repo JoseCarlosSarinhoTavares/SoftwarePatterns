@@ -2,14 +2,21 @@
 
 namespace Caches.Factories
 {
+    /// <summary>
+    /// Fábrica responsável por criar instâncias de cache.
+    /// Permite escolher entre cache em memória ou cache persistente no banco.
+    /// </summary>
     public class CacheFactory
     {
         /// <summary>
-        /// db | mem - Usar no banco ou em memória
+        /// Cria uma instância de cache baseada no tipo informado.
         /// </summary>
-        /// <param name="type"></param>
-        /// <returns></returns>
-        /// <exception cref="ArgumentException"></exception>
+        /// <param name="type">
+        /// "db"  - cache persistente no banco de dados  
+        /// "mem" - cache em memória
+        /// </param>
+        /// <returns>Instância de <see cref="ICache"/> correspondente ao tipo.</returns>
+        /// <exception cref="ArgumentException">Lançada quando o tipo informado é inválido.</exception>
         public static ICache GetCache(string type)
         {
             return type switch
@@ -20,10 +27,20 @@ namespace Caches.Factories
             };
         }
 
+        /// <summary>
+        /// Cria um cache em memória.
+        /// </summary>
+        /// <returns>Instância de <see cref="CacheMemory"/>.</returns>
         private static ICache GetCacheMemory() { return new CacheMemory(); }
 
-        private static ICache GetCacheDb() {
-            return new CacheDB(); // Deveria se um Singleton no mundo real }
+        /// <summary>
+        /// Cria um cache persistente no banco.
+        /// </summary>
+        /// <returns>Instância de <see cref="CacheDB"/>.</returns>
+        /// <remarks>Em um cenário real, este método deveria retornar um Singleton.</remarks>
+        private static ICache GetCacheDb()
+        {
+            return new CacheDB();
         }
     }
 }

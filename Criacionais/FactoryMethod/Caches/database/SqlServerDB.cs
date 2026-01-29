@@ -2,11 +2,23 @@
 
 namespace Caches.Database
 {
+    /// <summary>
+    /// Classe estática que gerencia o cache persistente no SQL Server.
+    /// Permite criar a tabela, inserir, consultar, remover e listar dados do cache.
+    /// </summary>
     public static class SqlServerDB
     {
+        /// <summary>
+        /// String de conexão com o banco SQL Server.
+        /// </summary>
         private static readonly string ConnectionString =
             "Server=(localdb)\\mssqllocaldb;Database=SoftwarePatterns;Trusted_Connection=True;";
 
+        /// <summary>
+        /// Cria e abre uma conexão com o banco de dados.
+        /// </summary>
+        /// <returns>Instância de <see cref="SqlConnection"/> aberta.</returns>
+        /// <exception cref="Exception">Lança exceção caso a conexão falhe.</exception>
         public static SqlConnection GetConnection()
         {
             try
@@ -17,10 +29,13 @@ namespace Caches.Database
             }
             catch (SqlException ex)
             {
-                throw new Exception("Database connection failed", ex);
+                throw new Exception("Falha ao conectar no banco de dados", ex);
             }
         }
 
+        /// <summary>
+        /// Inicializa a tabela de cache no banco caso ela não exista.
+        /// </summary>
         public static void Initialize()
         {
             try
@@ -39,10 +54,15 @@ namespace Caches.Database
             }
             catch (SqlException ex)
             {
-                throw new Exception("Error initializing database", ex);
+                throw new Exception("Erro ao inicializar o banco de dados", ex);
             }
         }
 
+        /// <summary>
+        /// Adiciona ou atualiza um valor no cache.
+        /// </summary>
+        /// <param name="key">Chave do cache.</param>
+        /// <param name="value">Valor a ser armazenado.</param>
         public static void PutCache(string key, string value)
         {
             try
@@ -65,10 +85,15 @@ namespace Caches.Database
             }
             catch (SqlException ex)
             {
-                throw new Exception("Error writing cache", ex);
+                throw new Exception("Erro ao gravar no cache", ex);
             }
         }
 
+        /// <summary>
+        /// Recupera um valor do cache pelo seu identificador.
+        /// </summary>
+        /// <param name="key">Chave do cache.</param>
+        /// <returns>Valor armazenado ou null se não existir.</returns>
         public static object GetCache(string key)
         {
             try
@@ -82,10 +107,14 @@ namespace Caches.Database
             }
             catch (SqlException ex)
             {
-                throw new Exception("Error reading cache", ex);
+                throw new Exception("Erro ao ler o cache", ex);
             }
         }
 
+        /// <summary>
+        /// Remove um valor do cache pelo seu identificador.
+        /// </summary>
+        /// <param name="key">Chave do cache.</param>
         public static void RemoveCache(string key)
         {
             try
@@ -99,10 +128,14 @@ namespace Caches.Database
             }
             catch (SqlException ex)
             {
-                throw new Exception("Error removing cache", ex);
+                throw new Exception("Erro ao remover o cache", ex);
             }
         }
 
+        /// <summary>
+        /// Retorna todos os registros do cache.
+        /// </summary>
+        /// <returns>Dicionário com chave e valor de todos os itens do cache.</returns>
         public static Dictionary<string, object> GetAll()
         {
             try
@@ -121,7 +154,7 @@ namespace Caches.Database
             }
             catch (SqlException ex)
             {
-                throw new Exception("Error listing cache", ex);
+                throw new Exception("Erro ao listar o cache", ex);
             }
         }
     }
