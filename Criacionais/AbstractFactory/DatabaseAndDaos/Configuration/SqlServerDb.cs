@@ -3,11 +3,23 @@ using System.Data.Common;
 
 namespace DatabaseAndDaos.Configuration
 {
+    /// <summary>
+    /// Classe de configuração e inicialização do banco de dados SQL Server.
+    /// Cria a conexão e garante que as tabelas <c>Clients</c> e <c>Products</c> existam.
+    /// </summary>
     public class SqlServerDb
     {
+        /// <summary>
+        /// String de conexão com o SQL Server LocalDB.
+        /// </summary>
         private const string ConnectionString =
             @"Server=(localdb)\MSSQLLocalDB;Database=SoftwarePatterns;Trusted_Connection=True;";
 
+        /// <summary>
+        /// Inicializa a conexão com o banco de dados e cria as tabelas se não existirem.
+        /// </summary>
+        /// <returns>Conexão aberta com o banco de dados.</returns>
+        /// <exception cref="ArgumentException">Lançada em caso de erro ao conectar no SQL Server.</exception>
         public DbConnection Initialize()
         {
             try
