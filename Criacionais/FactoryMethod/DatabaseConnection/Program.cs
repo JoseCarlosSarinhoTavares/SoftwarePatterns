@@ -4,22 +4,27 @@ using System.Data.Common;
 
 namespace DatabaseConnection
 {
+    /// <summary>
+    /// Demonstração do uso das conexões SQL Server e SQLite usando o padrão Factory.
+    /// </summary>
     public class Program
     {
         public static void Main(string[] args)
         {
+            // --------------------- SQL Server ---------------------
             Console.WriteLine("-------------------------------------------------------------------");
             Console.WriteLine("                         Conexão com SqlServer");
             Console.WriteLine("-------------------------------------------------------------------");
 
+            // Obtem conexão via factory
             IDbConnection sqlServerConnection = ConnectionsFactory.GetConnection("sqlserver");
 
-            // Poderia estar no DAO, que poderia usar o padrão factory para ser criado
+            // Usa a conexão em bloco using para garantir o Dispose
             using DbConnection conn1 = sqlServerConnection.Connect();
             using DbCommand cmd1 = conn1.CreateCommand();
 
+            // Consulta de exemplo
             cmd1.CommandText = "SELECT * FROM Users";
-
             using DbDataReader reader1 = cmd1.ExecuteReader();
 
             while (reader1.Read())
@@ -29,35 +34,38 @@ namespace DatabaseConnection
                 );
             }
 
+            // --------------------- SQLite ---------------------
             Console.WriteLine();
             Console.WriteLine("-------------------------------------------------------------------");
             Console.WriteLine("                         Conexão com SqLite");
             Console.WriteLine("-------------------------------------------------------------------");
 
+            // Obtem conexão via factory
             IDbConnection sqliteConnection = ConnectionsFactory.GetConnection("sqlite");
 
-            // Poderia estar no DAO, que poderia usar o padrão factory para ser criado
+            // Usa a conexão em bloco using para garantir o Dispose
             using DbConnection conn2 = sqliteConnection.Connect();
             using DbCommand cmd2 = conn2.CreateCommand();
 
-            // CRIA A TABELA NO SQLITE
+            // Cria tabela Users se não existir
             cmd2.CommandText = """
                 CREATE TABLE IF NOT EXISTS Users (
                     Id INTEGER PRIMARY KEY AUTOINCREMENT,
                     UserName TEXT NOT NULL,
                     Email TEXT NOT NULL
                 );
-                """;
+            """;
             cmd2.ExecuteNonQuery();
 
-            // insere dado de teste
+            // Insere dado de teste se tabela estiver vazia
             cmd2.CommandText = """
                 INSERT INTO Users (UserName, Email)
                 SELECT 'teste', 'teste@teste.com'
                 WHERE NOT EXISTS (SELECT 1 FROM Users);
-                """;
+            """;
             cmd2.ExecuteNonQuery();
 
+            // Consulta e exibe os dados
             cmd2.CommandText = "SELECT * FROM Users";
             using DbDataReader reader2 = cmd2.ExecuteReader();
 
@@ -67,7 +75,6 @@ namespace DatabaseConnection
                     $"UserName: {reader2["UserName"]} | Email: {reader2["Email"]}"
                 );
             }
-
         }
     }
 }

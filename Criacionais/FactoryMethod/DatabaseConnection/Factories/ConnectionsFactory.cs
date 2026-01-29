@@ -3,8 +3,18 @@ using DatabaseConnection.Connections.Interfaces;
 
 namespace DatabaseConnection.Factories
 {
+    /// <summary>
+    /// Fábrica para criação de conexões de banco de dados.
+    /// Suporta SQL Server e SQLite.
+    /// </summary>
     public class ConnectionsFactory
     {
+        /// <summary>
+        /// Retorna uma conexão de banco de dados do tipo especificado.
+        /// </summary>
+        /// <param name="tipo">Tipo de conexão: "sqlserver" ou "sqlite".</param>
+        /// <returns>Objeto que implementa <see cref="IDbConnection"/>.</returns>
+        /// <exception cref="ArgumentException">Lançado se o tipo for inválido ou não suportado.</exception>
         public static IDbConnection GetConnection(string tipo)
         {
             if (string.IsNullOrWhiteSpace(tipo))
@@ -23,6 +33,10 @@ namespace DatabaseConnection.Factories
             }
         }
 
+        /// <summary>
+        /// Cria e retorna uma conexão com SQL Server usando LocalDB.
+        /// </summary>
+        /// <returns>Instância de <see cref="SqlServerConnection"/>.</returns>
         private static IDbConnection GetSQLServerConnection()
         {
             return new SqlServerConnection(
@@ -30,6 +44,11 @@ namespace DatabaseConnection.Factories
             );
         }
 
+        /// <summary>
+        /// Cria e retorna uma conexão com SQLite.
+        /// O banco é armazenado no diretório base da aplicação.
+        /// </summary>
+        /// <returns>Instância de <see cref="SQLiteConnection"/>.</returns>
         private static IDbConnection GetSQLiteConnection()
         {
             return new SQLiteConnection(
