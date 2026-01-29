@@ -4,13 +4,21 @@ using BankAccounts.Factories;
 
 namespace BankAccounts
 {
+    /// <summary>
+    /// Aplicação de exemplo que demonstra o uso do Factory Method
+    /// para criar contas correntes e poupança e realizar operações básicas.
+    /// </summary>
     public class FactoryMethodApp
     {
+        /// <summary>
+        /// Ponto de entrada da aplicação.
+        /// </summary>
         public static void Main(string[] args)
         {
             string _accountNumber, _holderName;
             double _valueDeposit = 100.0, _valueWithdrawal = 50.0;
 
+            // Demonstração Conta Corrente
             Console.WriteLine("-------------------------------------------------------------------");
             Console.WriteLine("                         Conta Corrente");
             Console.WriteLine("-------------------------------------------------------------------");
@@ -30,6 +38,7 @@ namespace BankAccounts
             currentAccount.Cashout(_valueWithdrawal);
             Console.WriteLine(currentAccount);
 
+            // Demonstração Conta Poupança
             Console.WriteLine();
             Console.WriteLine("-------------------------------------------------------------------");
             Console.WriteLine("                         Conta Poupança");
@@ -50,7 +59,8 @@ namespace BankAccounts
             savingsAccount.Cashout(_valueWithdrawal);
             Console.WriteLine(savingsAccount);
 
-            //AccountsFactory.GetAccount("teste", null);
+            // Exemplo de uso de tipo inválido
+            // AccountsFactory.GetAccount("teste", null);
         }
     }
 }
