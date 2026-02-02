@@ -2,12 +2,12 @@
 
 ## **Padrões Criacionais**
 - **Abstract Factory:** 
-  - Fornece uma interface para criar famílias de objetos relacionados sem precisar conhecer suas classes concretas. Ideal quando você quer garantir que diferentes objetos trabalhem juntos de forma consistente.
-	Ex.: gerar relatórios em PDF e Excel, ou criar DAOs para SQL Server e SQLite.
+  - Fornece uma interface para criar famílias de objetos relacionados sem expor as classes concretas. Ideal quando você precisa garantir que os objetos criados sejam compatíveis entre si.
+	Ex.: gerar relatórios em PDF e Excel, ou criar DAOs para diferentes tipos de banco (SQL Server, MySQL, etc).
 
 - **Factory Method:** 
-  - Define uma interface para criar um objeto, mas deixa que subclasses escolham a implementação concreta. Permite criar objetos de forma flexível e facilmente extensível.
-	Ex.: criar contas bancárias (Corrente ou Poupança) ou conexões com diferentes bancos de dados.
+  - Define um método de criação em uma classe base, mas permite que as subclasses decidam qual classe concreta instanciar. Dá flexibilidade e facilita extensão sem alterar código existente.
+	Ex.: criar contas bancárias (Corrente ou Poupança) ou conexões para diferentes bancos de dados.
 
 ---
 
