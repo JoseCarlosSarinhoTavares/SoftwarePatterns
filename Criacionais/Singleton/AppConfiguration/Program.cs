@@ -7,7 +7,7 @@
             var appConfig = AppConfiguration.GetAppConfiguration();
 
             Console.WriteLine("=== Configurações carregadas ===");
-
+            Console.WriteLine();
             Console.WriteLine($"ConnectionStrings:SqlServer = {appConfig.ValueOf("ConnectionStrings:SqlServer")}");
             Console.WriteLine();
             Console.WriteLine($"App:Name = {appConfig.ValueOf("App:Name")}");
