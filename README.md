@@ -2,12 +2,16 @@
 
 ## **Padrões Criacionais**
 - **Abstract Factory:** 
-  - Fornece uma interface para criar uma família de objetos relacionados dentro de um mesmo domínio, sem depender das classes concretas.
-  - Ex.: gerar relatórios em PDF e Excel, ou criar DAOs para diferentes tipos de banco (SQL Server, MySQL, etc).
+  - Fornece uma **interface** para criar uma **família de objetos relacionados** dentro de um mesmo domínio, sem depender das classes concretas.
+  - Ex.: gerar relatórios em **PDF e Excel**, ou criar **DAOs** para diferentes tipos de banco (SQL Server, MySQL, etc).
 
 - **Factory Method:** 
-  - Define um método de criação em uma superclasse/interface, mas permite que as subclasses decidam qual classe concreta instanciar, mudando o tipo do objeto criado sem alterar o código cliente.
-  - Ex.: criar contas bancárias (Corrente ou Poupança) ou conexões para diferentes bancos de dados.
+  - Define um método de criação em uma **superclasse/interface**, mas permite que **as subclasses decidam qual classe concreta instanciar**, mas permite que as **subclasses decidam qual classe concreta instanciar**, mudando o tipo do objeto criado sem alterar o código cliente.
+  - Ex.: criar contas bancárias (**Corrente** ou **Poupança**) ou conexões para diferentes bancos de dados.
+  
+- **Singleton:** 
+  - Uma padrão criacional que garante que uma classe tenha **apenas uma única instância** durante todo o ciclo de vida da aplicação e fornece um **ponto global de acesso** a ela.
+  - Ex.: classe de **configurações da aplicação, logger (log central), cache** ou **gerenciador de conexão** com o banco.  
 
 ---
 
