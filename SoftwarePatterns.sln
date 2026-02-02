@@ -27,6 +27,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logger", "Criacionais\Singl
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatabaseConfiguration", "Criacionais\Singleton\DatabaseConfiguration\DatabaseConfiguration.csproj", "{17C63378-2113-487E-89F8-480988E98132}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppConfiguration", "Criacionais\Singleton\AppConfiguration\AppConfiguration.csproj", "{6EC4C172-DB16-44DF-902F-648AA239A84E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -65,6 +67,10 @@ Global
 		{17C63378-2113-487E-89F8-480988E98132}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{17C63378-2113-487E-89F8-480988E98132}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{17C63378-2113-487E-89F8-480988E98132}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6EC4C172-DB16-44DF-902F-648AA239A84E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6EC4C172-DB16-44DF-902F-648AA239A84E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6EC4C172-DB16-44DF-902F-648AA239A84E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6EC4C172-DB16-44DF-902F-648AA239A84E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -81,6 +87,7 @@ Global
 		{92F64897-2EDE-4906-AF2F-2689AD82981E} = {FCD1D775-0BAC-495C-8040-987DE41ED47A}
 		{83A30CD2-A2D6-49CA-989F-8268C90AE7E1} = {92F64897-2EDE-4906-AF2F-2689AD82981E}
 		{17C63378-2113-487E-89F8-480988E98132} = {92F64897-2EDE-4906-AF2F-2689AD82981E}
+		{6EC4C172-DB16-44DF-902F-648AA239A84E} = {92F64897-2EDE-4906-AF2F-2689AD82981E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {63AA5950-BB0F-4356-BC30-03C5D18B9341}
