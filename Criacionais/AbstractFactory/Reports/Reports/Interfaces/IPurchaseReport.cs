@@ -1,6 +1,6 @@
 ﻿using NodaTime;
 
-namespace Reports.Reports.Interfaces
+namespace Criacionais.AbstractFactory.Reports.Reports.Interfaces
 {
     /// <summary>
     /// Interface para relatórios de compras.

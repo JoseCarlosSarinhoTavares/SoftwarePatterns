@@ -1,7 +1,7 @@
-﻿using Reports.Reports.Interfaces;
-using Reports.Factories.Interfaces;
+﻿using Criacionais.AbstractFactory.Reports.Reports.Interfaces;
+using Criacionais.AbstractFactory.Reports.Factories.Interfaces;
 
-namespace Reports.Factories
+namespace Criacionais.AbstractFactory.Reports.Factories
 {
     /// <summary>
     /// Classe fábrica para criar instâncias de relatórios usando uma fábrica abstrata.

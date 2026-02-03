@@ -1,9 +1,9 @@
 ﻿using NodaTime;
 using OfficeOpenXml;
-using Reports.Reports.Interfaces;
+using Criacionais.AbstractFactory.Reports.Reports.Interfaces;
 
 
-namespace Reports.Reports
+namespace Criacionais.AbstractFactory.Reports.Reports
 {
     /// <summary>
     /// Implementação de <see cref="IPurchaseReport"/> que gera relatórios de compras em Excel.

@@ -1,6 +1,6 @@
-﻿using DatabaseAndDaos.Daos;
+﻿using Criacionais.AbstractFactory.DatabaseAndDaos.Daos;
 
-namespace DatabaseAndDaos.Factories.Interfaces
+namespace Criacionais.AbstractFactory.DatabaseAndDaos.Factories.Interfaces
 {
     /// <summary>
     /// Interface para fábricas abstratas de DAOs.

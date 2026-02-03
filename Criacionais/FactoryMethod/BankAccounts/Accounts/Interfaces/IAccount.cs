@@ -1,4 +1,4 @@
-﻿namespace BankAccounts.Accounts.Interfaces
+﻿namespace Criacionais.FactoryMethod.BankAccounts.Accounts.Interfaces
 {
     public interface IAccount
     {

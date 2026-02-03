@@ -1,8 +1,8 @@
-﻿using BankAccounts.Accounts;
-using BankAccounts.Accounts.Interfaces;
-using BankAccounts.Factories;
+﻿using Criacionais.FactoryMethod.BankAccounts.Accounts;
+using Criacionais.FactoryMethod.BankAccounts.Accounts.Interfaces;
+using Criacionais.FactoryMethod.BankAccounts.Factories;
 
-namespace BankAccounts
+namespace Criacionais.FactoryMethod.BankAccounts
 {
     /// <summary>
     /// Aplicação de exemplo que demonstra o uso do Factory Method

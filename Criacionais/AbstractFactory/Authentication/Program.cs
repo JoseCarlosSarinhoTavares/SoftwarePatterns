@@ -1,8 +1,8 @@
-﻿using Authentication.Configuration;
-using Authentication.Daos;
-using Authentication.Factories;
+﻿using Criacionais.AbstractFactory.Authentication.Configuration;
+using Criacionais.AbstractFactory.Authentication.Daos;
+using Criacionais.AbstractFactory.Authentication.Factories;
 
-namespace Authentication
+namespace Criacionais.AbstractFactory.Authentication
 {
     public class Program
     {

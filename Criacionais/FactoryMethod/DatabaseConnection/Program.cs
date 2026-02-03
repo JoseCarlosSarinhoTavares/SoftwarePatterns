@@ -1,8 +1,8 @@
-﻿using DatabaseConnection.Connections.Interfaces;
-using DatabaseConnection.Factories;
-using System.Data.Common;
+﻿using System.Data.Common;
+using Criacionais.FactoryMethod.DatabaseConnection.Connections.Interfaces;
+using Criacionais.FactoryMethod.DatabaseConnection.Factories;
 
-namespace DatabaseConnection
+namespace Criacionais.FactoryMethod.DatabaseConnection
 {
     /// <summary>
     /// Demonstração do uso das conexões SQL Server e SQLite usando o padrão Factory.

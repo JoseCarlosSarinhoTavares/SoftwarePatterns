@@ -1,6 +1,6 @@
 ﻿using System.Data.SqlClient;
 
-namespace Authentication.Configuration
+namespace Criacionais.AbstractFactory.Authentication.Configuration
 {
     public static class SqlServerDB
     {

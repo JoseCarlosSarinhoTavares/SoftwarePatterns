@@ -1,8 +1,8 @@
-﻿using DatabaseAndDaos.Daos;
-using DatabaseAndDaos.Factories.Interfaces;
-using System.Data.Common;
+﻿using System.Data.Common;
+using Criacionais.AbstractFactory.DatabaseAndDaos.Daos;
+using Criacionais.AbstractFactory.DatabaseAndDaos.Factories.Interfaces;
 
-namespace DatabaseAndDaos.Factories
+namespace Criacionais.AbstractFactory.DatabaseAndDaos.Factories
 {
     /// <summary>
     /// Fábrica concreta de DAOs para SQL Server.

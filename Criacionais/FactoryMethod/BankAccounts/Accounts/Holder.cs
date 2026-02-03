@@ -1,4 +1,4 @@
-﻿namespace BankAccounts.Accounts
+﻿namespace Criacionais.FactoryMethod.BankAccounts.Accounts
 {
     /// <summary>
     /// Representa o titular de uma conta bancária.

@@ -1,6 +1,6 @@
 ﻿using System.Data.SqlClient;
 
-namespace Caches.Database
+namespace Criacionais.FactoryMethod.Caches.Database
 {
     /// <summary>
     /// Classe estática que gerencia o cache persistente no SQL Server.

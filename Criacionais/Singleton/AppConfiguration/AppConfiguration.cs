@@ -1,9 +1,6 @@
 ﻿using Microsoft.Extensions.Configuration;
-using System;
-using System.Collections.Generic;
-using System.IO;
 
-namespace AppConfiguration
+namespace Criacionais.Singleton.AppConfiguration
 {
     /// <summary>
     /// Classe que carrega todas as configurações da aplicação a partir do arquivo appsettings.json.

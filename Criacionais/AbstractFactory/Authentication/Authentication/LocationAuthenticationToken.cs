@@ -1,6 +1,6 @@
-﻿using Authentication.Authentication.Interfaces;
+﻿using Criacionais.AbstractFactory.Authentication.Authentication.Interfaces;
 
-namespace Authentication.Authentication
+namespace Criacionais.AbstractFactory.Authentication.Authentication
 {
     /// <summary>
     /// Implementação de autenticação de token baseada em validação local.

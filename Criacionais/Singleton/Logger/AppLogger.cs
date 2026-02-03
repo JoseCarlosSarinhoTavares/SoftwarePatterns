@@ -1,4 +1,4 @@
-﻿namespace Logger
+﻿namespace Criacionais.Singleton.Logger
 {
     /// <summary>
     /// Classe de Logger da aplicação usando o padrão Singleton.

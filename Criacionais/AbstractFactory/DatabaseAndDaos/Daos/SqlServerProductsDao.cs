@@ -1,7 +1,7 @@
-﻿using DatabaseAndDaos.Entities;
-using System.Data.Common;
+﻿using System.Data.Common;
+using Criacionais.AbstractFactory.DatabaseAndDaos.Entities;
 
-namespace DatabaseAndDaos.Daos
+namespace Criacionais.AbstractFactory.DatabaseAndDaos.Daos
 {
     /// <summary>
     /// DAO de produtos específico para SQL Server.

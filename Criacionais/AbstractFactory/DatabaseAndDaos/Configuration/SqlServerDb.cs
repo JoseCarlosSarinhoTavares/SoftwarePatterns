@@ -1,7 +1,7 @@
 ﻿using Microsoft.Data.SqlClient;
 using System.Data.Common;
 
-namespace DatabaseAndDaos.Configuration
+namespace Criacionais.AbstractFactory.DatabaseAndDaos.Configuration
 {
     /// <summary>
     /// Classe de configuração e inicialização do banco de dados SQL Server.

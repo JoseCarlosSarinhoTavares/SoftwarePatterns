@@ -1,10 +1,10 @@
-﻿using DatabaseAndDaos.Configuration;
-using DatabaseAndDaos.Daos;
-using DatabaseAndDaos.Entities;
-using DatabaseAndDaos.Factories;
-using System.Data.Common;
+﻿using System.Data.Common;
+using Criacionais.AbstractFactory.DatabaseAndDaos.Configuration;
+using Criacionais.AbstractFactory.DatabaseAndDaos.Daos;
+using Criacionais.AbstractFactory.DatabaseAndDaos.Entities;
+using Criacionais.AbstractFactory.DatabaseAndDaos.Factories;
 
-namespace DatabaseAndDaos
+namespace Criacionais.AbstractFactory.DatabaseAndDaos
 {
     /// <summary>
     /// Programa de demonstração do uso de DAOs e fábricas para SQL Server e SQLite.

@@ -1,4 +1,4 @@
-﻿namespace Caches.Interfaces
+﻿namespace Criacionais.FactoryMethod.Caches.Interfaces
 {
     /// <summary>
     /// Interface que define os métodos básicos para um cache genérico.

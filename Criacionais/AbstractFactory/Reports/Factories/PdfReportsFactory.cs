@@ -1,8 +1,8 @@
-﻿using Reports.Factories.Interfaces;
-using Reports.Reports.Interfaces;
-using Reports.Reports;
+﻿using Criacionais.AbstractFactory.Reports.Factories.Interfaces;
+using Criacionais.AbstractFactory.Reports.Reports.Interfaces;
+using Criacionais.AbstractFactory.Reports.Reports;
 
-namespace Reports.Factories
+namespace Criacionais.AbstractFactory.Reports.Factories
 {
     /// <summary>
     /// Fábrica concreta para criação de relatórios em PDF.

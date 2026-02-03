@@ -2,7 +2,7 @@
 using Microsoft.Data.SqlClient;
 using Microsoft.Extensions.Configuration;
 
-namespace DatabaseConfiguration
+namespace Criacionais.Singleton.DatabaseConfiguration
 {
     /// <summary>
     /// Classe responsável por carregar a configuração do SQL Server e criar conexões com o banco.

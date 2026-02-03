@@ -1,8 +1,8 @@
-﻿using Reports.Factories;
-using Reports.Factories.Interfaces;
-using Reports.Reports.Interfaces;
+﻿using Criacionais.AbstractFactory.Reports.Factories;
+using Criacionais.AbstractFactory.Reports.Factories.Interfaces;
+using Criacionais.AbstractFactory.Reports.Reports.Interfaces;
 
-namespace Reports
+namespace Criacionais.AbstractFactory.Reports
 {
     /// <summary>
     /// Classe principal do projeto Reports.

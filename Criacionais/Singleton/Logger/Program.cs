@@ -1,4 +1,4 @@
-﻿namespace Logger
+﻿namespace Criacionais.Singleton.Logger
 {
     public class Program
     {

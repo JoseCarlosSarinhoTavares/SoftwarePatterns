@@ -1,6 +1,6 @@
 ﻿using System.Data.Common;
 
-namespace DatabaseConnection.Connections.Interfaces
+namespace Criacionais.FactoryMethod.DatabaseConnection.Connections.Interfaces
 {
     public interface IDbConnection
     {

@@ -1,10 +1,10 @@
-﻿using Authentication.Authentication;
-using Authentication.Authentication.Interfaces;
-using Authentication.Configuration;
-using Authentication.Daos;
-using Authentication.Factories.Interfaces;
+﻿using Criacionais.AbstractFactory.Authentication.Authentication;
+using Criacionais.AbstractFactory.Authentication.Authentication.Interfaces;
+using Criacionais.AbstractFactory.Authentication.Configuration;
+using Criacionais.AbstractFactory.Authentication.Daos;
+using Criacionais.AbstractFactory.Authentication.Factories.Interfaces;
 
-namespace Authentication.Factories
+namespace Criacionais.AbstractFactory.Authentication.Factories
 {
     /// <summary>
     /// Fábrica responsável por criar a autenticação de token baseada em banco de dados.

@@ -1,7 +1,7 @@
-﻿using Authentication.Authentication.Interfaces;
-using Authentication.Daos;
+﻿using Criacionais.AbstractFactory.Authentication.Authentication.Interfaces;
+using Criacionais.AbstractFactory.Authentication.Daos;
 
-namespace Authentication.Authentication
+namespace Criacionais.AbstractFactory.Authentication.Authentication
 {
     /// <summary>
     /// Implementação de autenticação usando tokens armazenados no banco.

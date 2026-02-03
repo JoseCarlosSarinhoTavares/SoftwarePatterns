@@ -1,7 +1,7 @@
-﻿using Authentication.Authentication.Interfaces;
-using Authentication.Factories.Interfaces;
+﻿using Criacionais.AbstractFactory.Authentication.Authentication.Interfaces;
+using Criacionais.AbstractFactory.Authentication.Factories.Interfaces;
 
-namespace Authentication.Factories
+namespace Criacionais.AbstractFactory.Authentication.Factories
 {
     /// <summary>
     /// Classe responsável por delegar a criação da autenticação para uma fábrica.

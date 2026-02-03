@@ -1,7 +1,7 @@
-﻿using Caches.Database;
-using Caches.Interfaces;
+﻿using Criacionais.FactoryMethod.Caches.Database;
+using Criacionais.FactoryMethod.Caches.Interfaces;
 
-namespace Caches
+namespace Criacionais.FactoryMethod.Caches
 {
     /// <summary>
     /// Implementação de <see cref="ICache"/> que utiliza o banco SQL Server como armazenamento.

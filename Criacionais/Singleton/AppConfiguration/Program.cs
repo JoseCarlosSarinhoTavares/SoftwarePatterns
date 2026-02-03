@@ -1,4 +1,4 @@
-﻿namespace AppConfiguration
+﻿namespace Criacionais.Singleton.AppConfiguration
 {
     internal class Program
     {

@@ -1,6 +1,6 @@
-﻿using Reports.Reports.Interfaces;
+﻿using Criacionais.AbstractFactory.Reports.Reports.Interfaces;
 
-namespace Reports.Factories.Interfaces
+namespace Criacionais.AbstractFactory.Reports.Factories.Interfaces
 {
     /// <summary>
     /// Interface da fábrica abstrata de relatórios.

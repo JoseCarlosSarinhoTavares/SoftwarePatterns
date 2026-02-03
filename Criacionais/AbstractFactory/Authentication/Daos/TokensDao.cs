@@ -1,6 +1,6 @@
 ﻿using System.Data.SqlClient;
 
-namespace Authentication.Daos
+namespace Criacionais.AbstractFactory.Authentication.Daos
 {
     /// <summary>
     /// DAO para manipulação de tokens no banco de dados.

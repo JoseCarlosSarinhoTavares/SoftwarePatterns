@@ -1,9 +1,9 @@
 ﻿using iTextSharp.text.pdf;
 using iTextSharp.text;
 using NodaTime;
-using Reports.Reports.Interfaces;
+using Criacionais.AbstractFactory.Reports.Reports.Interfaces;
 
-namespace Reports.Reports
+namespace Criacionais.AbstractFactory.Reports.Reports
 {
     /// <summary>
     /// Implementação de <see cref="IPurchaseReport"/> que gera relatórios de compras em PDF.

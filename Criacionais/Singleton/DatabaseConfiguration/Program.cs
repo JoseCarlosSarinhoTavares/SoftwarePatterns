@@ -1,6 +1,6 @@
 ﻿using System.Data.Common;
 
-namespace DatabaseConfiguration
+namespace Criacionais.Singleton.DatabaseConfiguration
 {
     internal class Program
     {

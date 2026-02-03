@@ -1,6 +1,6 @@
-﻿using Caches.Interfaces;
+﻿using Criacionais.FactoryMethod.Caches.Interfaces;
 
-namespace Caches.Factories
+namespace Criacionais.FactoryMethod.Caches.Factories
 {
     /// <summary>
     /// Fábrica responsável por criar instâncias de cache.

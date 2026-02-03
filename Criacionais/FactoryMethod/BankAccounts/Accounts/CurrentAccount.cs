@@ -1,6 +1,6 @@
-﻿using BankAccounts.Accounts.Interfaces;
+﻿using Criacionais.FactoryMethod.BankAccounts.Accounts.Interfaces;
 
-namespace BankAccounts.Accounts
+namespace Criacionais.FactoryMethod.BankAccounts.Accounts
 {
     /// <summary>
     /// Conta corrente que implementa <see cref="IAccount"/>.

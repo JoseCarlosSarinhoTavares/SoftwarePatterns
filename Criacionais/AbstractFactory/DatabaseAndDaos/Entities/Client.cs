@@ -1,4 +1,4 @@
-﻿namespace DatabaseAndDaos.Entities
+﻿namespace Criacionais.AbstractFactory.DatabaseAndDaos.Entities
 {
     /// <summary>
     /// Representa um cliente no sistema.

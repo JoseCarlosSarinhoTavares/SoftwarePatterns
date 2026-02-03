@@ -1,7 +1,7 @@
-﻿using DatabaseConnection.Connections;
-using DatabaseConnection.Connections.Interfaces;
+﻿using Criacionais.FactoryMethod.DatabaseConnection.Connections;
+using Criacionais.FactoryMethod.DatabaseConnection.Connections.Interfaces;
 
-namespace DatabaseConnection.Factories
+namespace Criacionais.FactoryMethod.DatabaseConnection.Factories
 {
     /// <summary>
     /// Fábrica para criação de conexões de banco de dados.

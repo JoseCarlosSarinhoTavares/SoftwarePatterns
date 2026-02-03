@@ -1,6 +1,6 @@
-﻿using Authentication.Authentication.Interfaces;
+﻿using Criacionais.AbstractFactory.Authentication.Authentication.Interfaces;
 
-namespace Authentication.Factories.Interfaces
+namespace Criacionais.AbstractFactory.Authentication.Factories.Interfaces
 {
     /// <summary>
     /// Contrato para fábricas responsáveis por criar implementações de autenticação de token.

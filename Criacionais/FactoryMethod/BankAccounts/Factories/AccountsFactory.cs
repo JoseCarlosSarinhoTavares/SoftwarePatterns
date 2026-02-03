@@ -1,7 +1,7 @@
-﻿using BankAccounts.Accounts;
-using BankAccounts.Accounts.Interfaces;
+﻿using Criacionais.FactoryMethod.BankAccounts.Accounts;
+using Criacionais.FactoryMethod.BankAccounts.Accounts.Interfaces;
 
-namespace BankAccounts.Factories
+namespace Criacionais.FactoryMethod.BankAccounts.Factories
 {
     /// <summary>
     /// Fábrica de contas bancárias.

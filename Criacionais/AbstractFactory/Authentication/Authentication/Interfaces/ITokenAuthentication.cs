@@ -1,4 +1,4 @@
-﻿namespace Authentication.Authentication.Interfaces
+﻿namespace Criacionais.AbstractFactory.Authentication.Authentication.Interfaces
 {
     /// <summary>
     /// Contrato para autenticação baseada em token.

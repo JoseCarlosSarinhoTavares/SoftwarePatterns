@@ -1,6 +1,6 @@
-﻿using Caches.Interfaces;
+﻿using Criacionais.FactoryMethod.Caches.Interfaces;
 
-namespace Caches
+namespace Criacionais.FactoryMethod.Caches
 {
     /// <summary>
     /// Implementação de <see cref="ICache"/> que utiliza memória interna (Dictionary) como armazenamento.

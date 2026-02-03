@@ -1,8 +1,8 @@
-﻿using Caches.Database;
-using Caches.Factories;
-using Caches.Interfaces;
+﻿using Criacionais.FactoryMethod.Caches.Database;
+using Criacionais.FactoryMethod.Caches.Factories;
+using Criacionais.FactoryMethod.Caches.Interfaces;
 
-namespace Caches
+namespace Criacionais.FactoryMethod.Caches
 {
     /// <summary>
     /// Programa principal para demonstração do uso de cache.

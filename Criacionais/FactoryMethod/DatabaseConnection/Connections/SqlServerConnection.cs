@@ -1,8 +1,8 @@
-﻿using DatabaseConnection.Connections.Interfaces;
-using Microsoft.Data.SqlClient;
+﻿using Microsoft.Data.SqlClient;
 using System.Data.Common;
+using Criacionais.FactoryMethod.DatabaseConnection.Connections.Interfaces;
 
-namespace DatabaseConnection.Connections
+namespace Criacionais.FactoryMethod.DatabaseConnection.Connections
 {
     /// <summary>
     /// Representa uma conexão com SQL Server.
