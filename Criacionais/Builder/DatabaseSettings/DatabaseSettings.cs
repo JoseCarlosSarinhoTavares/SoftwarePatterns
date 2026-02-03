@@ -30,20 +30,14 @@
             private string _database = "";
             private string _parameters = "";
             private string _server = "";
-
             /// <summary>
             /// Indica se deve usar autenticação integrada do Windows (Trusted_Connection=True).
             /// </summary>
             private bool _trustedConnection = true;
-
             private string _username = "";
-
             private string _password = "";
-
             private int _maxConnections;
-
             private bool _inMemory = false;
-
             private bool _useUrl = true; // padrão
 
             /// <summary>
