@@ -6,7 +6,7 @@
   - Ex.: gerar relatórios em **PDF e Excel**, ou criar **DAOs** para diferentes tipos de banco (SQL Server, MySQL, etc).
 
 - **Factory Method:** 
-  - Define um método de criação em uma **superclasse/interface**, mas permite que **as subclasses decidam qual classe concreta instanciar**, mas permite que as **subclasses decidam qual classe concreta instanciar**, mudando o tipo do objeto criado sem alterar o código cliente.
+  - Define um método de criação em uma **superclasse/interface**, mas permite que as **subclasses decidam qual classe concreta instanciar**, mudando o tipo do objeto criado sem alterar o código cliente.
   - Ex.: criar contas bancárias (**Corrente** ou **Poupança**) ou conexões para diferentes bancos de dados.
   
 - **Singleton:** 
