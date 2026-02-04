@@ -1,10 +1,10 @@
-﻿namespace SoftwarePatterns.Creational.Singleton.Logger
+﻿namespace SoftwarePatterns.Creational.Singleton.Logging
 {
     public class Program
     {
         public static void Main(string[] args)
         {
-            LoggerProvider logger = LoggerProvider.GetLoggerProvider();
+            Logger logger = Logger.GetLoggerProvider();
 
             logger.Debug("Uma mensagem de debug");
             logger.Info("Uma mensagem de info");

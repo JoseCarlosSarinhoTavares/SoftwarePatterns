@@ -23,11 +23,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DatabaseConnection", "Creat
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Singleton", "Singleton", "{15201956-C210-4025-9251-AD9E9F914DA1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppSettings", "Creational\Singleton\AppSettings\AppSettings.csproj", "{7C066905-749C-458E-ABA6-02F080F9AB46}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppSettings", "Creational\Singleton\AppSettings\AppSettings.csproj", "{7C066905-749C-458E-ABA6-02F080F9AB46}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logger", "Creational\Singleton\Logger\Logger.csproj", "{73BF2F43-0F08-44D2-8FBC-1CD1AD3AD8F2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Logging", "Creational\Singleton\Logger\Logging.csproj", "{73BF2F43-0F08-44D2-8FBC-1CD1AD3AD8F2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatabaseSettings", "Creational\Singleton\DatabaseSettings\DatabaseSettings.csproj", "{EDB6E983-FB8F-4495-808E-9BBE9CD3B0EB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DatabaseSettings", "Creational\Singleton\DatabaseSettings\DatabaseSettings.csproj", "{EDB6E983-FB8F-4495-808E-9BBE9CD3B0EB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Builder", "Builder", "{C1E03931-55B6-455B-B7DC-98B453E512C0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatabaseSettings", "Creational\Builder\DatabaseSettings\DatabaseSettings.csproj", "{19C0A696-47E5-45F0-BF64-3806419A42B2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -71,6 +75,10 @@ Global
 		{EDB6E983-FB8F-4495-808E-9BBE9CD3B0EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EDB6E983-FB8F-4495-808E-9BBE9CD3B0EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EDB6E983-FB8F-4495-808E-9BBE9CD3B0EB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{19C0A696-47E5-45F0-BF64-3806419A42B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{19C0A696-47E5-45F0-BF64-3806419A42B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{19C0A696-47E5-45F0-BF64-3806419A42B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{19C0A696-47E5-45F0-BF64-3806419A42B2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -88,6 +96,8 @@ Global
 		{7C066905-749C-458E-ABA6-02F080F9AB46} = {15201956-C210-4025-9251-AD9E9F914DA1}
 		{73BF2F43-0F08-44D2-8FBC-1CD1AD3AD8F2} = {15201956-C210-4025-9251-AD9E9F914DA1}
 		{EDB6E983-FB8F-4495-808E-9BBE9CD3B0EB} = {15201956-C210-4025-9251-AD9E9F914DA1}
+		{C1E03931-55B6-455B-B7DC-98B453E512C0} = {6BBD2F17-92A0-426B-9AD3-94C89DBAEB51}
+		{19C0A696-47E5-45F0-BF64-3806419A42B2} = {C1E03931-55B6-455B-B7DC-98B453E512C0}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {63AA5950-BB0F-4356-BC30-03C5D18B9341}

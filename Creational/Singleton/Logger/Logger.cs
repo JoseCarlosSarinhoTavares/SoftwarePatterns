@@ -1,32 +1,32 @@
-﻿namespace SoftwarePatterns.Creational.Singleton.Logger
+﻿namespace SoftwarePatterns.Creational.Singleton.Logging
 {
     /// <summary>
     /// Classe de Logger da aplicação usando o padrão Singleton.
     /// Garante que exista apenas uma instância de LoggerProvider durante toda a execução.
     /// </summary>
-    public class LoggerProvider
+    public class Logger
     {
         /// <summary>
         /// Instância única (singleton) da classe LoggerProvider.
         /// </summary>
-        private static LoggerProvider instance;
+        private static Logger instance;
 
         /// <summary>
         /// Construtor privado para impedir que a classe seja instanciada diretamente com "new".
         /// </summary>
-        private LoggerProvider() { }
+        private Logger() { }
 
         /// <summary>
         /// Retorna a instância única do logger.
         /// Se ainda não existir, cria a instância.
         /// </summary>
-        /// <returns>Instância única de <see cref="LoggerProvider"/>.</returns>
-        public static LoggerProvider GetLoggerProvider()
+        /// <returns>Instância única de <see cref="Logger"/>.</returns>
+        public static Logger GetLoggerProvider()
         {
             // Verifica se a instância ainda não foi criada.
             if (instance == null)
                 // Cria a instância única.
-                instance = new LoggerProvider();
+                instance = new Logger();
 
             // Retorna a instância única.
             return instance;
