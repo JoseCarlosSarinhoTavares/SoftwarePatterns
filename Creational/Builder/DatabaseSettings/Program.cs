@@ -5,7 +5,7 @@
         public static void Main(string[] args)
         {
             // URL normal
-            var dbUrl = new DatabaseConnectionSettings.Builder()
+            var dbUrl = new DatabaseSettingsBuilder.Builder()
                 .UseUrl()
                 .Protocol("https")
                 .Host("localhost")
@@ -18,7 +18,7 @@
             Console.WriteLine(dbUrl.GetUrl());
 
             // URL InMemory
-            var dbUrlMemory = new DatabaseConnectionSettings.Builder()
+            var dbUrlMemory = new DatabaseSettingsBuilder.Builder()
                 .UseUrl()
                 .Database("SoftwarePatterns")
                 .InMemory()
@@ -28,7 +28,7 @@
             Console.WriteLine(dbUrlMemory.GetUrl());
 
             // ConnectionString normal
-            var dbConn = new DatabaseConnectionSettings.Builder()
+            var dbConn = new DatabaseSettingsBuilder.Builder()
                 .UseConnectionString()
                 .Server(@"(localdb)\MSSQLLocalDB")
                 .Database("SoftwarePatterns")
@@ -39,7 +39,7 @@
             Console.WriteLine(dbConn.GetConnectionString());
 
             // ConnectionString InMemory
-            var dbConnMemory = new DatabaseConnectionSettings.Builder()
+            var dbConnMemory = new DatabaseSettingsBuilder.Builder()
                 .UseConnectionString()
                 .Database("SoftwarePatterns")
                 .InMemory()

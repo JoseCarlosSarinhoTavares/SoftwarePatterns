@@ -4,7 +4,7 @@
     /// Representa as configurações de conexão com banco de dados.
     /// Pode expor a conexão no formato de URL ou ConnectionString (SQL Server).
     /// </summary>
-    public class DatabaseConnectionSettings
+    public class DatabaseSettingsBuilder
     {
         public string Url { get; private set; }
         public string ConnectionString { get; private set; }
@@ -167,9 +167,9 @@
             ///   - Monta ConnectionString do SQL Server com base em Server/Database/TrustedConnection.
             /// - No final, preenche apenas o campo correspondente ao modo escolhido (UseUrl ou UseConnectionString).
             /// </summary>
-            public DatabaseConnectionSettings Build()
+            public DatabaseSettingsBuilder Build()
             {
-                var settings = new DatabaseConnectionSettings
+                var settings = new DatabaseSettingsBuilder
                 {
                     Username = _username,
                     Password = _password,

@@ -11,7 +11,11 @@
   
 - **Singleton:** 
   - Uma padrão criacional que garante que uma classe tenha **apenas uma única instância** durante todo o ciclo de vida da aplicação e fornece um **ponto global de acesso** a ela.
-  - Ex.: classe de **configurações da aplicação, logger (log central), cache** ou **gerenciador de conexão** com o banco.  
+  - Ex.: classe de **configurações da aplicação, logger (log central), cache** ou **gerenciador de conexão** com o banco.
+  
+- **Builder:** 
+  - Separa a construção de um objeto complexo em **passos**, permitindo montar diferentes variações do mesmo objeto sem precisar de vários construtores.
+  - Ex.: montar DatabaseSettings como URL ou ConnectionString, definir host/porta/banco, habilitar TrustedConnection, ou usar modo InMemory.
 
 ---
 
