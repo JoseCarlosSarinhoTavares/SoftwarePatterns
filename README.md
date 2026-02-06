@@ -1,6 +1,6 @@
 ## **Padrões de Projetos de Software**
 
-## **Padrões Criacionais**
+## **Criacionais**
 - **Abstract Factory:** 
   - Fornece uma **interface** para criar uma **família de objetos relacionados**, sem depender das classes concretas.
   - **Usar quando:** precisa trocar famílias inteiras de objetos (ex.: trocar banco, UI, relatórios) sem alterar o código cliente.
