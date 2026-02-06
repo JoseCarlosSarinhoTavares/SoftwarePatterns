@@ -2,20 +2,29 @@
 
 ## **Padrões Criacionais**
 - **Abstract Factory:** 
-  - Fornece uma **interface** para criar uma **família de objetos relacionados** dentro de um mesmo domínio, sem depender das classes concretas.
-  - Ex.: gerar relatórios em **PDF e Excel**, ou criar **DAOs** para diferentes tipos de banco (SQL Server, MySQL, etc).
+  - Fornece uma **interface** para criar uma **família de objetos relacionados**, sem depender das classes concretas.
+  - **Usar quando:** precisa trocar famílias inteiras de objetos (ex.: trocar banco, UI, relatórios) sem alterar o código cliente.
+  - **Não usar quando:** só existe um objeto simples para criar ou não há variação de famílias.
 
 - **Factory Method:** 
-  - Define um método de criação em uma **superclasse/interface**, mas permite que as **subclasses decidam qual classe concreta instanciar**, mudando o tipo do objeto criado sem alterar o código cliente.
-  - Ex.: criar contas bancárias (**Corrente** ou **Poupança**) ou conexões para diferentes bancos de dados.
+  - Define um método de criação em uma **superclasse/interface**, deixando as **subclasses decidirem** qual classe concreta instanciar.
+  - **Usar quando:** o tipo do objeto varia conforme o contexto e você quer evitar if/switch espalhado.
+  - **Não usar quando:** o tipo do objeto é fixo e não muda.
   
 - **Singleton:** 
-  - Uma padrão criacional que garante que uma classe tenha **apenas uma única instância** durante todo o ciclo de vida da aplicação e fornece um **ponto global de acesso** a ela.
-  - Ex.: classe de **configurações da aplicação, logger (log central), cache** ou **gerenciador de conexão** com o banco.
+  - Garante que uma classe tenha **apenas uma única instância** e fornece um **ponto global de acesso**.
+  - **Usar quando:** o estado precisa ser único e compartilhado (configuração, cache, logger).
+  - **Não usar quando:** há necessidade de múltiplas instâncias, testes isolados ou injeção de dependência (Singleton vira acoplamento).
   
 - **Builder:** 
-  - Separa a construção de um objeto complexo em **passos**, permitindo montar diferentes variações do mesmo objeto sem precisar de vários construtores.
-  - Ex.: montar DatabaseSettings como URL ou ConnectionString, definir host/porta/banco, habilitar TrustedConnection, ou usar modo InMemory.
+  - Separa a construção de um objeto complexo em **passos**, permitindo várias combinações sem explosão de construtores.
+  - **Usar quando:** o objeto tem muitos parâmetros opcionais ou múltiplas formas de montagem.
+  - **Não usar quando:** o objeto é simples e pode ser criado com um construtor direto.
+  
+- **Prototype:** 
+  - Cria novos objetos a partir da **clonagem de um protótipo existente**.
+  - **Usar quando:** criar o objeto do zero é caro ou quando muitas instâncias são variações de um mesmo padrão.
+  - **Não usar quando:** o objeto é simples ou a clonagem profunda é complexa e propensa a erro.
 
 ---
 
