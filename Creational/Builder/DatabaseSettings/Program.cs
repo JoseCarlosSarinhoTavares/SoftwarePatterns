@@ -15,7 +15,7 @@
                 .Build();
 
             Console.WriteLine("=== URL ===");
-            Console.WriteLine(dbUrl.GetUrl());
+            Console.WriteLine(dbUrl.Url);
 
             // URL InMemory
             var dbUrlMemory = new DatabaseSettingsBuilder.Builder()
@@ -25,18 +25,18 @@
                 .Build();
 
             Console.WriteLine("\n=== URL InMemory ===");
-            Console.WriteLine(dbUrlMemory.GetUrl());
+            Console.WriteLine(dbUrlMemory.Url);
 
             // ConnectionString normal
             var dbConn = new DatabaseSettingsBuilder.Builder()
                 .UseConnectionString()
                 .Server(@"(localdb)\MSSQLLocalDB")
                 .Database("SoftwarePatterns")
-                .TrustedConnection(true)
+                .TrustedConnection()
                 .Build();
 
             Console.WriteLine("\n=== ConnectionString ===");
-            Console.WriteLine(dbConn.GetConnectionString());
+            Console.WriteLine(dbConn.ConnectionString);
 
             // ConnectionString InMemory
             var dbConnMemory = new DatabaseSettingsBuilder.Builder()
@@ -46,7 +46,7 @@
                 .Build();
 
             Console.WriteLine("\n=== ConnectionString InMemory ===");
-            Console.WriteLine(dbConnMemory.GetConnectionString());
+            Console.WriteLine(dbConnMemory.ConnectionString);
         }
     }
 }

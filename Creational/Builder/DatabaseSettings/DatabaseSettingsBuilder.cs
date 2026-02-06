@@ -1,172 +1,114 @@
 ﻿namespace SoftwarePatterns.Creational.Builder.DatabaseSettings
 {
     /// <summary>
-    /// Representa as configurações de conexão com banco de dados.
-    /// Pode expor a conexão no formato de URL ou ConnectionString (SQL Server).
+    /// Representa as configurações finais de conexão com o banco de dados.
     /// </summary>
     public class DatabaseSettingsBuilder
     {
-        public string Url { get; private set; }
-        public string ConnectionString { get; private set; }
-        public string Username { get; private set; }
-        public string Password { get; private set; }
+        public string? Url { get; private set; }
+        public string? ConnectionString { get; private set; }
+        public string? Username { get; private set; }
+        public string? Password { get; private set; }
         public int MaxConnections { get; private set; }
 
-        public string GetUrl() => Url;
-        public string GetConnectionString() => ConnectionString;
-        public string GetUsername() => Username;
-        public string GetPassword() => Password;
-        public int GetMaxConnections() => MaxConnections;
+        private DatabaseSettingsBuilder() { }
 
         /// <summary>
-        /// Builder responsável por montar o objeto DatabaseSettingsProvider passo a passo (Builder Pattern).
-        /// Permite escolher entre gerar URL ou ConnectionString, além de suportar modo InMemory.
+        /// Builder responsável por construir DatabaseSettingsBuilder passo a passo.
         /// </summary>
         public class Builder
         {
-            private string _protocol = "";
-            private string _host = "";
-            private string _port = "";
-            private string _database = "";
-            private string _parameters = "";
-            private string _server = "";
-            /// <summary>
-            /// Indica se deve usar autenticação integrada do Windows (Trusted_Connection=True).
-            /// </summary>
+            private string? _protocol;
+            private string? _host;
+            private string? _port;
+            private string? _database;
+            private string? _parameters;
+            private string? _server;
             private bool _trustedConnection = true;
-            private string _username = "";
-            private string _password = "";
+            private string? _username;
+            private string? _password;
             private int _maxConnections;
-            private bool _inMemory = false;
-            private bool _useUrl = true; // padrão
+            private bool _inMemory;
+            private bool _useUrl = true;
 
-            /// <summary>
-            /// Define que o Builder deve gerar a saída no formato de URL.
-            /// </summary>
             public Builder UseUrl()
             {
                 _useUrl = true;
                 return this;
             }
 
-            /// <summary>
-            /// Define que o Builder deve gerar a saída no formato de ConnectionString (SQL Server).
-            /// </summary>
             public Builder UseConnectionString()
             {
                 _useUrl = false;
                 return this;
             }
 
-            /// <summary>
-            /// Define o protocolo da URL (ex.: "https").
-            /// </summary>
             public Builder Protocol(string protocol)
             {
                 _protocol = protocol;
                 return this;
             }
 
-            /// <summary>
-            /// Define o host da URL (ex.: "localhost").
-            /// </summary>
             public Builder Host(string host)
             {
                 _host = host;
                 return this;
             }
 
-            /// <summary>
-            /// Define a porta da URL (ex.: "5432").
-            /// </summary>
             public Builder Port(string port)
             {
                 _port = port;
                 return this;
             }
 
-            /// <summary>
-            /// Define o nome do banco de dados (usado tanto na URL quanto na ConnectionString).
-            /// </summary>
             public Builder Database(string database)
             {
                 _database = database;
                 return this;
             }
 
-            /// <summary>
-            /// Define parâmetros adicionais da URL (ex.: "ssl=true").
-            /// </summary>
             public Builder Parameters(string parameters)
             {
                 _parameters = parameters;
                 return this;
             }
 
-            /// <summary>
-            /// Define o servidor do SQL Server para montar a ConnectionString.
-            /// </summary>
             public Builder Server(string server)
             {
                 _server = server;
                 return this;
             }
 
-            /// <summary>
-            /// Define se deve usar Trusted Connection (autenticação integrada).
-            /// </summary>
-            public Builder TrustedConnection(bool trusted)
+            public Builder TrustedConnection(bool value = true)
             {
-                _trustedConnection = trusted;
+                _trustedConnection = value;
                 return this;
             }
 
-            /// <summary>
-            /// Define o usuário do banco (usado quando TrustedConnection = false).
-            /// </summary>
             public Builder Username(string username)
             {
                 _username = username;
                 return this;
             }
 
-            /// <summary>
-            /// Define a senha do banco (usada quando TrustedConnection = false).
-            /// </summary>
             public Builder Password(string password)
             {
                 _password = password;
                 return this;
             }
 
-            /// <summary>
-            /// Define o limite máximo de conexões.
-            /// </summary>
             public Builder MaxConnections(int maxConnections)
             {
                 _maxConnections = maxConnections;
                 return this;
             }
 
-            /// <summary>
-            /// Ativa o modo InMemory.
-            /// Nesse modo, não é montada URL real nem ConnectionString real de servidor.
-            /// </summary>
             public Builder InMemory()
             {
                 _inMemory = true;
                 return this;
             }
 
-            /// <summary>
-            /// Finaliza a construção e retorna o objeto DatabaseSettingsProvider pronto.
-            /// Regras:
-            /// - Se InMemory estiver ativo, preenche Url e ConnectionString com valores "em memória".
-            /// - Se não estiver em memória:
-            ///   - Monta URL com base em Protocol/Host/Port/Database/Parameters.
-            ///   - Monta ConnectionString do SQL Server com base em Server/Database/TrustedConnection.
-            /// - No final, preenche apenas o campo correspondente ao modo escolhido (UseUrl ou UseConnectionString).
-            /// </summary>
             public DatabaseSettingsBuilder Build()
             {
                 var settings = new DatabaseSettingsBuilder
@@ -183,21 +125,20 @@
                     return settings;
                 }
 
-                var url = $"{_protocol}://{_host}:{_port}/{_database}";
-                if (!string.IsNullOrWhiteSpace(_parameters))
-                    url += $"?{_parameters}";
-
-                string connStr;
-
-                if (_trustedConnection)
-                    connStr = $@"Server={_server};Database={_database};Trusted_Connection=True;";
-                else
-                    connStr = $@"Server={_server};Database={_database};User Id={_username};Password={_password};";
-
                 if (_useUrl)
+                {
+                    var url = $"{_protocol}://{_host}:{_port}/{_database}";
+                    if (!string.IsNullOrWhiteSpace(_parameters))
+                        url += $"?{_parameters}";
+
                     settings.Url = url;
+                }
                 else
-                    settings.ConnectionString = connStr;
+                {
+                    settings.ConnectionString = _trustedConnection
+                        ? $@"Server={_server};Database={_database};Trusted_Connection=True;"
+                        : $@"Server={_server};Database={_database};User Id={_username};Password={_password};";
+                }
 
                 return settings;
             }

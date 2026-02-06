@@ -35,6 +35,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatabaseSettings", "Creatio
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SqlInsert", "Creational\Builder\SqlInsert\SqlInsert.csproj", "{7C57ECA7-A5CC-4A9C-8776-B1E6F12C6582}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomerProfile", "Creational\Builder\CustomerProfile\CustomerProfile.csproj", "{912A4E1D-709C-46E4-B1E0-E0A61229D16E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -85,6 +87,10 @@ Global
 		{7C57ECA7-A5CC-4A9C-8776-B1E6F12C6582}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7C57ECA7-A5CC-4A9C-8776-B1E6F12C6582}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7C57ECA7-A5CC-4A9C-8776-B1E6F12C6582}.Release|Any CPU.Build.0 = Release|Any CPU
+		{912A4E1D-709C-46E4-B1E0-E0A61229D16E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{912A4E1D-709C-46E4-B1E0-E0A61229D16E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{912A4E1D-709C-46E4-B1E0-E0A61229D16E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{912A4E1D-709C-46E4-B1E0-E0A61229D16E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -105,6 +111,7 @@ Global
 		{C1E03931-55B6-455B-B7DC-98B453E512C0} = {6BBD2F17-92A0-426B-9AD3-94C89DBAEB51}
 		{19C0A696-47E5-45F0-BF64-3806419A42B2} = {C1E03931-55B6-455B-B7DC-98B453E512C0}
 		{7C57ECA7-A5CC-4A9C-8776-B1E6F12C6582} = {C1E03931-55B6-455B-B7DC-98B453E512C0}
+		{912A4E1D-709C-46E4-B1E0-E0A61229D16E} = {C1E03931-55B6-455B-B7DC-98B453E512C0}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {63AA5950-BB0F-4356-BC30-03C5D18B9341}
