@@ -37,18 +37,18 @@ namespace SoftwarePatterns.Creational.Prototype.ServerConfiguration
             return new ServerConfiguration(Name, Ip, Ram, Disk, Cpu, Tmp, HealthPort);
         }
 
-        public string GetNome() => Name;
+        public string GetName() => Name;
         public string GetIp() => Ip;
         public string GetRam() => Ram;
-        public string GetDisco() => Disk;
+        public string GetDisk() => Disk;
         public double GetCpu() => Cpu;
         public string GetTmp() => Tmp;
         public int GetHealthPort() => HealthPort;
 
-        public void SetNome(string name) => Name = name;
+        public void SetName(string name) => Name = name;
         public void SetIp(string ip) => Ip = ip;
         public void SetRam(string ram) => Ram = ram;
-        public void SetDisco(string disk) => Disk = disk;
+        public void SetDisk(string disk) => Disk = disk;
         public void SetCpu(double cpu) => Cpu = cpu;
         public void SetTmp(string tmp) => Tmp = tmp;
         public void SetHealthPort(int healthPort) => HealthPort = healthPort;
