@@ -21,7 +21,7 @@
             private SimpleCustomer _simpleCustomer;
             private SocialCustomer _socialCustomer;
 
-            public Builder SimpleCustomer(SimpleCustomer simpleCustomer)
+            public Builder SimpleCustomer(SimpleCustomer simpleCustomer) 
             {
                 _simpleCustomer = simpleCustomer;
                 return this;
