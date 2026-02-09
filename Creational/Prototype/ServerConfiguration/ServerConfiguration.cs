@@ -53,7 +53,6 @@ namespace SoftwarePatterns.Creational.Prototype.ServerConfiguration
         public void SetTmp(string tmp) => Tmp = tmp;
         public void SetHealthPort(int healthPort) => HealthPort = healthPort;
 
-
         /// <summary>
         /// Retorna uma representação legível da configuração do servidor,
         /// formatada em múltiplas linhas para facilitar a visualização em logs e console.
